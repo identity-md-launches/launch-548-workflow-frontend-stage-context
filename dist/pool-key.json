@@ -1,0 +1,7 @@
+{
+  "fee": 12500,
+  "hooks": "0x1b7dae02cbe9ccd80ae77e1f51884a324f006000",
+  "currency0": "0x0000000000000000000000000000000000000000",
+  "currency1": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+  "tickSpacing": 60
+}

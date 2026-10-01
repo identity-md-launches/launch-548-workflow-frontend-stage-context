@@ -1,0 +1,209 @@
+{
+  "timestamp": "2026-10-01T05:04:09.233Z",
+  "target": "Committed production export served at /preview/",
+  "checks": [
+    {
+      "name": "Exact decimal validation, slippage bounds and ERC-20 pair direction encoding",
+      "result": "PASS"
+    },
+    {
+      "name": "Public reads, newest-first entries, pagination and no unsolicited wallet request",
+      "result": "PASS"
+    },
+    {
+      "name": "UTF-8 byte count rejects 284-byte emoji message",
+      "result": "PASS"
+    },
+    {
+      "name": "Wallet connection, wrong-chain guard, unknown-chain add with exact vetted parameters, then switch",
+      "result": "PASS"
+    },
+    {
+      "name": "Exact guestbook approval, simulated signing, confirmed receipt, refreshed balance/feed, escaped onchain text",
+      "result": "PASS"
+    },
+    {
+      "name": "Rejected wallet request reports recovery and releases action lock",
+      "result": "PASS"
+    },
+    {
+      "name": "Native-input simulated quote and swap: exact value, approved router, command/actions, no approvals",
+      "result": "PASS"
+    },
+    {
+      "name": "Token-input swap: exact token approval, expiring Permit2 router allowance, no native value",
+      "result": "PASS"
+    },
+    {
+      "name": "Expired quote disables swap execution",
+      "result": "PASS"
+    },
+    {
+      "name": "Advanced transfer, burn, allowance revocation, transferFrom and burnFrom controls simulate and submit",
+      "result": "PASS"
+    },
+    {
+      "name": "Simulation revert prevents wallet submission and presents persistent error",
+      "result": "PASS"
+    },
+    {
+      "name": "Account removal and chain events invalidate transaction prerequisites",
+      "result": "PASS"
+    },
+    {
+      "name": "Reflow at 1440, 820, 390, 320 CSS pixels and 200% text enlargement at 320px",
+      "result": "PASS"
+    },
+    {
+      "name": "Keyboard skip link, visible focus capture and keyboard-operated note/checkbox",
+      "result": "PASS"
+    },
+    {
+      "name": "Automated axe scan: zero WCAG A/AA violations in inspected state",
+      "result": "PASS"
+    },
+    {
+      "name": "Measured rendered text, form boundary and focus-ring contrast pass their thresholds",
+      "result": "PASS"
+    },
+    {
+      "name": "Empty guestbook and missing-wallet guidance",
+      "result": "PASS"
+    },
+    {
+      "name": "Missing deployed bytecode blocks transactions",
+      "result": "PASS"
+    },
+    {
+      "name": "All RPC failures retain a recoverable error state",
+      "result": "PASS"
+    },
+    {
+      "name": "Approval remains locked between wallet submission and delayed receipt confirmation",
+      "result": "PASS"
+    },
+    {
+      "name": "Tampered ABI asset fails manifest verification before rendering transaction controls",
+      "result": "PASS"
+    },
+    {
+      "name": "No browser JavaScript errors or missing local export assets",
+      "result": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "resourceFailures": [],
+  "measurements": {
+    "textEnlargementOverflow": [],
+    "styles": {
+      "body": {
+        "color": "rgb(38, 46, 40)",
+        "background": "rgba(0, 0, 0, 0)",
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "fontFamily": "Arial, \"Helvetica Neue\", sans-serif"
+      },
+      ".compose": {
+        "color": "rgb(38, 46, 40)",
+        "background": "rgb(252, 250, 245)",
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "fontFamily": "Arial, \"Helvetica Neue\", sans-serif"
+      },
+      ".intro-copy": {
+        "color": "rgb(97, 103, 95)",
+        "background": "rgba(0, 0, 0, 0)",
+        "fontSize": "17px",
+        "lineHeight": "28.05px",
+        "fontFamily": "Arial, \"Helvetica Neue\", sans-serif"
+      },
+      ".primary": {
+        "color": "rgb(252, 250, 245)",
+        "background": "rgb(36, 78, 65)",
+        "fontSize": "14px",
+        "lineHeight": "19.6px",
+        "fontFamily": "Arial, \"Helvetica Neue\", sans-serif"
+      },
+      "#message": {
+        "color": "rgb(38, 46, 40)",
+        "background": "rgb(252, 250, 245)",
+        "fontSize": "16px",
+        "lineHeight": "25.6px",
+        "fontFamily": "Arial, \"Helvetica Neue\", sans-serif"
+      },
+      "h1": {
+        "color": "rgb(38, 46, 40)",
+        "background": "rgba(0, 0, 0, 0)",
+        "fontSize": "88px",
+        "lineHeight": "87.12px",
+        "fontFamily": "Georgia, \"Times New Roman\", serif"
+      },
+      "h2": {
+        "color": "rgb(38, 46, 40)",
+        "background": "rgba(0, 0, 0, 0)",
+        "fontSize": "28px",
+        "lineHeight": "35px",
+        "fontFamily": "Georgia, \"Times New Roman\", serif"
+      }
+    },
+    "contrast": [
+      {
+        "selector": ".intro-copy",
+        "foreground": "rgb(97, 103, 95)",
+        "background": "rgb(244, 241, 233)",
+        "ratio": 5.148679228041876,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".compose",
+        "foreground": "rgb(38, 46, 40)",
+        "background": "rgb(252, 250, 245)",
+        "ratio": 13.38685292923035,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".primary",
+        "foreground": "rgb(252, 250, 245)",
+        "background": "rgb(36, 78, 65)",
+        "ratio": 8.98301999930094,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".hint",
+        "foreground": "rgb(97, 103, 95)",
+        "background": "rgb(252, 250, 245)",
+        "ratio": 5.571100408837142,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".error",
+        "foreground": "rgb(160, 53, 40)",
+        "background": "rgb(244, 241, 233)",
+        "ratio": 6.131084277800871,
+        "threshold": 4.5
+      },
+      {
+        "selector": ".stat-label",
+        "foreground": "rgb(97, 103, 95)",
+        "background": "rgb(244, 241, 233)",
+        "ratio": 5.148679228041876,
+        "threshold": 4.5
+      },
+      {
+        "selector": "#message border",
+        "foreground": "rgb(133, 139, 129)",
+        "background": "rgb(252, 250, 245)",
+        "ratio": 3.3512011967821307,
+        "threshold": 3
+      },
+      {
+        "selector": "focus ring on surface",
+        "foreground": "#244e41",
+        "background": "rgb(252, 250, 245)",
+        "ratio": 8.98301999930094,
+        "threshold": 3
+      }
+    ]
+  },
+  "result": "PASS"
+}

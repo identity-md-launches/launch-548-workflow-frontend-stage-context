@@ -1,0 +1,40 @@
+
+> guestbook-frontend@1.0.0 build
+> npm run typecheck && vite build && node scripts/export.mjs
+
+
+> guestbook-frontend@1.0.0 typecheck
+> tsc --noEmit
+
+vite v8.3.1 building client environment for production...
+transforming...
+✓ 443 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/index.html                   0.92 kB │ gzip:   0.47 kB
+../dist/assets/index-0wh4V1Ua.css   13.27 kB │ gzip:   3.50 kB
+../dist/assets/ccip-yuQlR45q.js      2.83 kB │ gzip:   1.30 kB
+../dist/assets/index-BLASgt2O.js   540.65 kB │ gzip: 164.82 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 908ms
+{
+  "result": "PASS",
+  "assets": 8,
+  "exportBytes": 570053,
+  "sourceCommit": "3d7b46921810505efa1567c9294eba53900fe344",
+  "abiHashes": [
+    {
+      "name": "LaunchToken",
+      "hash": "639175fa4bb3a87dddf097f92eb690f8dfc96f9465da21c05d2cd012a2aa0639"
+    },
+    {
+      "name": "Guestbook",
+      "hash": "b963661092833900522363c718d23930154623d8d19372f523bbac089084eb3d"
+    }
+  ]
+}

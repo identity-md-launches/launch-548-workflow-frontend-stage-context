@@ -1,0 +1,38 @@
+import { execFileSync } from 'node:child_process';
+import { mkdir, cp, stat, lstat, writeFile, readFile } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('../../', import.meta.url));
+const git = (...args) => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
+const allowed = path => /^(web|dist|docs)\//.test(path) && (!path.split('/').some(p => p.startsWith('.')) || path === 'web/.gitignore');
+const changed = [...git('diff', '--name-only', 'HEAD').split('\n'), ...git('ls-files', '--others', '--exclude-standard').split('\n')].filter(Boolean).filter(p => !p.startsWith('test/scratch/'));
+if (changed.some(p => !allowed(p))) throw new Error(`Out-of-scope paths: ${changed.filter(p => !allowed(p)).join(', ')}`);
+const files = [...new Set([...git('ls-files').split('\n'), ...changed])].filter(Boolean).sort();
+if (files.some(p => /(^|\/)(node_modules|\.cache|\.npm|\.vite|vendor\/npm)(\/|$)|\.tgz$/.test(p))) throw new Error('Dependency/cache artifact in submission');
+if (git('ls-files', '--stage').split('\n').some(line => line.startsWith('160000'))) throw new Error('Git submodule present');
+const scratch = resolve(root, 'test/scratch/package-audit');
+await mkdir(scratch, { recursive: true });
+const snapshot = resolve(scratch, `tree-${Date.now()}`);
+await mkdir(snapshot);
+let treeBytes = 0;
+for (const file of files) {
+  const path = resolve(root, file);
+  if (!(await lstat(path)).isFile()) throw new Error(`Unexpected non-file: ${file}`);
+  treeBytes += (await stat(path)).size;
+  await mkdir(dirname(resolve(snapshot, file)), { recursive: true });
+  await cp(path, resolve(snapshot, file));
+}
+const run = (...args) => execFileSync('git', args, { cwd: snapshot, stdio: 'pipe' });
+run('init', '--quiet'); run('add', '--all');
+run('-c', 'user.name=Package size check', '-c', 'user.email=package-check@example.invalid', 'commit', '--quiet', '-m', 'Validation snapshot of complete submission tree');
+const treeBundle = resolve(scratch, 'complete-tree.bundle');
+run('bundle', 'create', treeBundle, 'HEAD');
+const baseBundle = resolve(scratch, 'baseline-history.bundle');
+execFileSync('git', ['bundle', 'create', baseBundle, 'HEAD'], { cwd: root, stdio: 'pipe' });
+const snapshotBundleBytes = (await stat(treeBundle)).size;
+const baselineHistoryBundleBytes = (await stat(baseBundle)).size;
+const conservativeCombinedBytes = snapshotBundleBytes + baselineHistoryBundleBytes;
+if (conservativeCombinedBytes >= 8388608) throw new Error('Complete Git object coverage exceeds 8 MiB');
+const report = { result: 'PASS', method: 'Sum of a full-tree snapshot Git bundle and original baseline-history Git bundle; duplicates are intentionally not subtracted. Snapshot is a disposable size test, not a commit to the task repository.', files: files.length, rawTreeBytes: treeBytes, snapshotBundleBytes, baselineHistoryBundleBytes, conservativeCombinedBytes, limitBytes: 8388608, scope: 'Only web/**, dist/**, docs/** and web/.gitignore changed; no dependencies, cache archives, symlinks or submodules in the selected tree.' };
+await writeFile(resolve(root, 'docs/evidence/package-audit.json'), JSON.stringify(report, null, 2) + '\n');
+console.log(JSON.stringify(report, null, 2));

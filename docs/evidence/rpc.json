@@ -1,0 +1,188 @@
+[
+  {
+    "url": "https://ethereum-sepolia-rpc.publicnode.com",
+    "timestamp": "2026-10-01T05:05:55.910Z",
+    "chainId": 11155111,
+    "code": [
+      {
+        "name": "LaunchToken",
+        "address": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+        "bytes": 1928
+      },
+      {
+        "name": "Guestbook",
+        "address": "0x77b6338f6b8fdcc739d514ccb194603c3c4b0e28",
+        "bytes": 2490
+      },
+      {
+        "name": "poolManager",
+        "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+        "bytes": 24009
+      },
+      {
+        "name": "universalRouter",
+        "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+        "bytes": 19540
+      },
+      {
+        "name": "quoter",
+        "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+        "bytes": 5820
+      },
+      {
+        "name": "stateView",
+        "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+        "bytes": 3531
+      },
+      {
+        "name": "positionManager",
+        "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+        "bytes": 23877
+      },
+      {
+        "name": "permit2",
+        "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+        "bytes": 9152
+      },
+      {
+        "name": "poolGuard",
+        "address": "0x1b7dae02cbe9ccd80ae77e1f51884a324f006000",
+        "bytes": 488
+      }
+    ],
+    "entryCount": "0",
+    "tokenBinding": "0xe971aF94D7a1619863A1704f4C5164a16bE7d7D3",
+    "slot0": [
+      "560227709747861399187319382274582",
+      "177284",
+      "0",
+      "12500"
+    ],
+    "liquidity": "0",
+    "result": "PASS"
+  },
+  {
+    "url": "https://rpc.sepolia.ethpandaops.io",
+    "timestamp": "2026-10-01T05:05:56.342Z",
+    "chainId": 11155111,
+    "code": [
+      {
+        "name": "LaunchToken",
+        "address": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+        "bytes": 1928
+      },
+      {
+        "name": "Guestbook",
+        "address": "0x77b6338f6b8fdcc739d514ccb194603c3c4b0e28",
+        "bytes": 2490
+      },
+      {
+        "name": "poolManager",
+        "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+        "bytes": 24009
+      },
+      {
+        "name": "universalRouter",
+        "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+        "bytes": 19540
+      },
+      {
+        "name": "quoter",
+        "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+        "bytes": 5820
+      },
+      {
+        "name": "stateView",
+        "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+        "bytes": 3531
+      },
+      {
+        "name": "positionManager",
+        "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+        "bytes": 23877
+      },
+      {
+        "name": "permit2",
+        "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+        "bytes": 9152
+      },
+      {
+        "name": "poolGuard",
+        "address": "0x1b7dae02cbe9ccd80ae77e1f51884a324f006000",
+        "bytes": 488
+      }
+    ],
+    "entryCount": "0",
+    "tokenBinding": "0xe971aF94D7a1619863A1704f4C5164a16bE7d7D3",
+    "slot0": [
+      "560227709747861399187319382274582",
+      "177284",
+      "0",
+      "12500"
+    ],
+    "liquidity": "0",
+    "result": "PASS"
+  },
+  {
+    "url": "https://sepolia.rpc.sentio.xyz",
+    "timestamp": "2026-10-01T05:05:57.277Z",
+    "chainId": 11155111,
+    "code": [
+      {
+        "name": "LaunchToken",
+        "address": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+        "bytes": 1928
+      },
+      {
+        "name": "Guestbook",
+        "address": "0x77b6338f6b8fdcc739d514ccb194603c3c4b0e28",
+        "bytes": 2490
+      },
+      {
+        "name": "poolManager",
+        "address": "0xe03a1074c86cfedd5c142c4f04f1a1536e203543",
+        "bytes": 24009
+      },
+      {
+        "name": "universalRouter",
+        "address": "0x3a9d48ab9751398bbfa63ad67599bb04e4bdf98b",
+        "bytes": 19540
+      },
+      {
+        "name": "quoter",
+        "address": "0x61b3f2011a92d183c7dbadbda940a7555ccf9227",
+        "bytes": 5820
+      },
+      {
+        "name": "stateView",
+        "address": "0xe1dd9c3fa50edb962e442f60dfbc432e24537e4c",
+        "bytes": 3531
+      },
+      {
+        "name": "positionManager",
+        "address": "0x429ba70129df741b2ca2a85bc3a2a3328e5c09b4",
+        "bytes": 23877
+      },
+      {
+        "name": "permit2",
+        "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+        "bytes": 9152
+      },
+      {
+        "name": "poolGuard",
+        "address": "0x1b7dae02cbe9ccd80ae77e1f51884a324f006000",
+        "bytes": 488
+      }
+    ],
+    "entryCount": "0",
+    "tokenBinding": "0xe971aF94D7a1619863A1704f4C5164a16bE7d7D3",
+    "slot0": [
+      "560227709747861399187319382274582",
+      "177284",
+      "0",
+      "12500"
+    ],
+    "liquidity": "0",
+    "result": "PASS"
+  }
+]

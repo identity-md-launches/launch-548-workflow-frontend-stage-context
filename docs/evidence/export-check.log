@@ -1,0 +1,20 @@
+
+> guestbook-frontend@1.0.0 check:export
+> node scripts/export.mjs --check
+
+{
+  "result": "PASS",
+  "assets": 8,
+  "exportBytes": 570053,
+  "sourceCommit": "3d7b46921810505efa1567c9294eba53900fe344",
+  "abiHashes": [
+    {
+      "name": "LaunchToken",
+      "hash": "639175fa4bb3a87dddf097f92eb690f8dfc96f9465da21c05d2cd012a2aa0639"
+    },
+    {
+      "name": "Guestbook",
+      "hash": "b963661092833900522363c718d23930154623d8d19372f523bbac089084eb3d"
+    }
+  ]
+}

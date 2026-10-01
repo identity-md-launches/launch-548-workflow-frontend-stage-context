@@ -1,0 +1,58 @@
+{
+  "chainId": 11155111,
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x1b7dae02cbe9ccd80ae77e1f51884a324f006000",
+    "currency0": "0x0000000000000000000000000000000000000000",
+    "currency1": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+    "tickSpacing": 60
+  },
+  "repoUrl": "https://github.com/identity-md-launches/launch-544-workflow-contract-stage-context",
+  "version": 1,
+  "launchId": "6374c1c6-e865-4d4f-bb9c-ba07e39b5320",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Onchain guestbook paid in the launch token. LaunchToken (src/LaunchToken.sol) is a fixed-supply ERC-20 with no constructor arguments: name 'Guestbook Token', symbol 'GUEST', 18 decimals, whole supply minted once to its deployer (the factory) in the constructor. It has no owner, mint, pause, blocklist, transfer fee or upgrade path. Its only non-standard surface is burn/burnFrom from OpenZeppelin ERC20Burnable, so supply can only decrease; reviewers should confirm this burn surface is acceptable for the launch token. Guestbook (src/Guestbook.sol) is the single application contract. Its constructor is Guestbook(address token_), nonpayable, and receives $token; it reverts on the zero address or an address without code, so it must deploy after the token. It stores the token as an immutable and grants no role to msg.sender (the factory). sign(string) stores a message of 1 to 280 bytes and burns exactly 10 tokens (10e18 minor units) from the signer through burnFrom, which requires a prior allowance to the guestbook. Entries are append-only. The guestbook has no owner, no privileged role, no pause, no withdraw and no upgrade path, holds no tokens and no ETH, and needs no initialization call; therefore no $owner argument is used. The pool pairs the token with native ETH (zero address). The factory supplies the liquidity position, the MerkleDistributor and the initialization-only pool guard; none of them is a project contract. The manifest fee of 3000 is the admission value; the pool opens at the network trading fee read by the factory. Supply, allocations, owner and policy values come from services, not from this manifest.",
+    "token": {
+      "name": "Guestbook Token",
+      "symbol": "GUEST",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": [
+      {
+        "contract": "Guestbook",
+        "constructorArgs": [
+          "$token"
+        ]
+      }
+    ]
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0xc3aaa524d1f87bd2c664b099a0ca58f6ee7c461ccef52ff00d4ae2ff237566b3",
+      "abiHash": "639175fa4bb3a87dddf097f92eb690f8dfc96f9465da21c05d2cd012a2aa0639",
+      "address": "0xe971af94d7a1619863a1704f4c5164a16be7d7d3",
+      "blockNumber": 11819403,
+      "creationCodeHash": "eca6115d676a12ce700869023d862f0aa0a43fd88b45ff0d4df9e8e6d77abe89"
+    },
+    {
+      "name": "Guestbook",
+      "txHash": "0xc3aaa524d1f87bd2c664b099a0ca58f6ee7c461ccef52ff00d4ae2ff237566b3",
+      "abiHash": "b963661092833900522363c718d23930154623d8d19372f523bbac089084eb3d",
+      "address": "0x77b6338f6b8fdcc739d514ccb194603c3c4b0e28",
+      "blockNumber": 11819403,
+      "creationCodeHash": "c890665638bb02fa166ce1313429777e3e609001c7728567fb4ec1faf56879d5"
+    }
+  ],
+  "sourceCommit": "3d7b46921810505efa1567c9294eba53900fe344",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "2bc24ad2bce1a0a697f9ea5277cae2dcf8310394917f2414bac05032bacbc222"
+}

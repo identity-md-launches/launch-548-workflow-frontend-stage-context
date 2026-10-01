@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "method": "Sum of a full-tree snapshot Git bundle and original baseline-history Git bundle; duplicates are intentionally not subtracted. Snapshot is a disposable size test, not a commit to the task repository.",
+  "files": 110,
+  "rawTreeBytes": 4312584,
+  "snapshotBundleBytes": 2637048,
+  "baselineHistoryBundleBytes": 111630,
+  "conservativeCombinedBytes": 2748678,
+  "limitBytes": 8388608,
+  "scope": "Only web/**, dist/**, docs/** and web/.gitignore changed; no dependencies, cache archives, symlinks or submodules in the selected tree."
+}
